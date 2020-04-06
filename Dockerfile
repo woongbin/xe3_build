@@ -12,6 +12,7 @@ WORKDIR /var/www
 RUN git clone https://github.com/xpressengine/xpressengine.git
 
 WORKDIR /var/www/xpressengine
+RUN mkdir privates
 RUN composer install
 
 RUN chgrp -R www-data /var/www/xpressengine
